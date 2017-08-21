@@ -1,228 +1,89 @@
 <html>
-<head>
-  <meta charset="UTF-8">
-  <style type="text/css">
-  @import url('https://fonts.googleapis.com/css?family=Cinzel');
+    
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/main_style.css" />
+    </head>
+    
+    <body>
+        <span class="title">grandpa's internet</span>
+    
+        <div class="container" id="google">
+            <img src="images/google.png" class="search-logo" />
+            <form method="get" action="http://www.google.co.uk/search" target="_blank">
+                <input id="field" name="q" type="text" class="search-box" />
+                <div class="clear-button"><span class="delete-button">x</span>
+                </div>
+                <input type="submit" value="Search" class="search-button google" />
+            </form>
+        </div>
+    
+        <div class="container" id="amazon">
+            <img src="images/amazon.png" class="search-logo" />
+            <form method="get" action="http://www.amazon.co.uk/s/" target="_blank">
+                <input type="hidden" name="url" value="search-alias=aps" style="display:none;" />
+                <input id="field" name="field-keywords" type="text" class="search-box" />
+                <div class="clear-button"><span class="delete-button">x</span>
+                </div>
+                <input type="submit" value="Go" class="search-button amazon" />
+            </form>
+        </div>
+    
+        <div class="container" id="ebay">
+            <img src="images/ebay.png" class="search-logo" />
+            <form method="get" action="http://www.ebay.co.uk/sch/i.html" target="_blank">
+                <input id="field" name="_nkw" type="text" class="search-box" />
+                <div class="clear-button"><span class="delete-button">x</span>
+                </div>
+                <input type="submit" value="_nkw" class="search-button ebay" />
+            </form>
+        </div>
+    
+    
 
-  span.title {
-    display: block;
-    font-family: 'Cinzel', serif;
-    font-size: 90px;
-    color: #444;
-  }
-
-  /* div container containing the form  */
-  #searchContainer {
-  	margin:10px;
-  }
-
-  /* Style the search input field. */
-  #field {
-  	float:left;
-  	width:65%;
-  	height:31px;
-  	line-height:26.5px;
-  	text-indent:10px;
-  	font-family:arial, sans-serif;
-  	font-size:1em;
-  	color:#333;
-  	background: #fff;
-  	border:solid 1px #d9d9d9;
-  	border-top:solid 1px #c0c0c0;
-  	border-right:none;
-    border-top-left-radius: 6px;
-    border-bottom-left-radius: 6px;
-  }
-
-  /* Style the "X" text button next to the search input field */
-  #delete {
-  	float:left;
-  	width:auto;
-  	height:29px;
-  	line-height:27px;
-  	margin-right:15px;
-  	padding:0 10px 0 10px;
-  	font-family: "Lucida Sans", "Lucida Sans Unicode",sans-serif;
-  	font-size:22px;
-  	background: #fff;
-  	border:solid 1px #d9d9d9;
-  	border-top:solid 1px #c0c0c0;
-  	border-left:none;
-    border-top-right-radius: 6px;
-    border-bottom-right-radius: 6px;
-  }
-  /* Set default state of "X" and hide it */
-  #delete #x {
-  	color:#A1B9ED;
-  	cursor:pointer;
-  	/*display:none;*/
-  }
-  /* Set the hover state of "X" */
-  #delete #x:hover {
-  	color:#36c;
-  }
-  /* Syle the search button. Settings of line-height, font-size, text-indent used to hide submit value in IE */
-  #submit {
-  	cursor:pointer;
-  	width:70px;
-  	height: 31px;
-  	line-height:0;
-  	font-size:0;
-  	text-indent:-999px;
-  	color: transparent;
-    border-radius: 4px;
-  }
-
-  #submit.google {
-    background: url(images/ico-search.png) no-repeat #4d90fe center;
-  	border: 1px solid #3079ED;
-  }
-  #submit.amazon {
-    background: url(images/ico-search.png) no-repeat #FF9900 center;
-  	border: 1px solid #FF9900;
-  }
-  #submit.ebay {
-    background: url(images/ico-search.png) no-repeat #86b817 center;
-  	border: 1px solid #86b817;
-  }
-  #submit.youtube {
-    background: url(images/ico-search.png) no-repeat #e52d27 center;
-  	border: 1px solid #b31217;
-  }
-  #submit.rightmove {
-    background: url(images/ico-search.png) no-repeat #86D0F4 center;
-    border: 1px solid #86D0F4;
-  }
-  #submit.gumtree {
-    background: url(images/ico-search.png) no-repeat #72ef36 center;
-    border: 1px solid #72ef36;
-  }
-  /* Clear floats */
-  .fclear {clear:both}
-
-  input:focus{
-    outline: none;
-  }
-
-  div.container {
-    border-style: solid;
-    border-color: #bbb;
-    border-width: 2px;
-    padding: 20px;
-    width: 28%;
-    height: 100px;
-    display: inline-block;
-  	-moz-border-radius: 5px;
-  	-webkit-border-radius: 5px;
-  }
-
-  div.gmail {
-    background: url(images/gmail.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  div.bt {
-    background: url(images/bt.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  a.fill-div {
-      display: block;
-      height: 100%;
-      width: 100%;
-      text-decoration: none;
-  }
-
-  </style>
-</head>
-
-<body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
-  </script>
-  <span class="title">grandpa's internet</span>
-
-
-  <div id="searchContainer" class="container">
-    <img src="images/google.png" height="50px" style="margin-bottom:-8px" />
-  	<form method="get" action="http://www.google.co.uk/search" target="_blank">
-  		<input id="field" name="q" type="text" />
-  		<div id="delete"><span id="x">x</span></div>
-  		<input id="submit" name="submit" type="submit" value="Search" class="google"/>
-  	</form>
-  </div>
-
-  <div id="searchContainer" class="container">
-    <img src="images/amazon.png" height="50px" style="margin-bottom:-8px" />
-    <form method="get" action="http://www.amazon.co.uk/s/" target="_blank">
-      <input type=”hidden” name=”url” value=”search-alias=aps” style="display:none;"/>
-      <input id="field" name="field-keywords" type="text" />
-      <div id="delete"><span id="x">x</span></div>
-      <input id="submit" name="submit" type="submit" value="Go" class="amazon"/>
-    </form>
-  </div>
-
-  <div id="searchContainer" class="container">
-    <img src="images/ebay.png" height="50px" style="margin-bottom:-8px" />
-    <form method="get" action="http://www.ebay.co.uk/sch/i.html" target="_blank">
-      <input id="field" name="_nkw" type="text" />
-      <div id="delete"><span id="x">x</span></div>
-      <input id="submit" name="submit" type="submit" value="_nkw" class="ebay"/>
-    </form>
-  </div>
-
-
-
-
-
-  <div id="searchContainer" class="container">
-    <img src="images/youtube.png" height="50px" style="margin-bottom:-8px" />
-    <form method="get" action="https://www.youtube.com/results" target="_blank">
-      <input id="field" name="search_query" type="text" />
-      <div id="delete"><span id="x">x</span></div>
-      <input id="submit" name="submit" type="submit" class="youtube"/>
-    </form>
-  </div>
-
-  <div id="searchContainer" class="container">
-    <img src="images/rightmove.png" height="50px" style="margin-bottom:-8px" />
-    <form method="get" action="http://www.rightmove.co.uk/property-for-sale/search.html" target="_blank">
-      <input id="field" name="searchLocation" type="text" />
-      <div id="delete"><span id="x">x</span></div>
-      <input id="submit" name="submit" type="submit" value="searchLocation" class="rightmove"/>
-    </form>
-  </div>
-
-  <div id="searchContainer" class="container">
-    <img src="images/gumtree.svg" height="50px" style="margin-bottom:-8px" />
-    <form method="get" action="https://www.gumtree.com/search" target="_blank">
-      <input id="field" name="q" type="text" />
-      <div id="delete"><span id="x">x</span></div>
-      <input id="submit" name="submit" type="submit" value="q" class="gumtree"/>
-    </form>
-  </div>
-
-
-  <center>
-  <div id="searchContainer" class="container gmail">
-    <a href="http://mail.google.com" class="fill-div" target="_blank"></a>
-  </div>
-
-  <div id="searchContainer" class="container bt">
-    <a href="https://www.bt.com/appsconsumeraccount/secure/dashboard.do" class="fill-div" target="_blank"></a>
-  </div>
-  </center>
-
-
-  <script type="text/javascript">
-  $(document).ready(function() {
-    // on click of "X", delete input field value and hide "X"
-    $("span#x").click(function() {
-      $("input#field").val("");
-    });
-  });
-  </script>
-
-</body>
+        <div class="container" id="youtube">
+            <img src="images/youtube.png" class="search-logo" />
+            <form method="get" action="https://www.youtube.com/results" target="_blank">
+                <input id="field" name="search_query" type="text" class="search-box" />
+                <div class="clear-button"><span class="delete-button">x</span>
+                </div>
+                <input type="submit" class="search-button youtube" />
+            </form>
+        </div>
+    
+        <div class="container" id="rightmove">
+            <img src="images/rightmove.png" class="search-logo" />
+            <form method="get" action="http://www.rightmove.co.uk/property-for-sale/search.html" target="_blank">
+                <input id="field" name="searchLocation" type="text" class="search-box" />
+                <div class="clear-button"><span class="delete-button">x</span>
+                </div>
+                <input type="submit" value="searchLocation" class="search-button rightmove" />
+            </form>
+        </div>
+    
+        <div class="container" id="gumtree">
+            <img src="images/gumtree.svg" class="search-logo" />
+            <form method="get" action="https://www.gumtree.com/search" target="_blank">
+                <input id="field" name="q" type="text" class="search-box" />
+                <div class="clear-button"><span class="delete-button">x</span>
+                </div>
+                <input type="submit" value="q" class="search-button gumtree" />
+            </form>
+        </div>
+    
+    
+    
+        <center>
+            <div class="container" id="gmail">
+                <a href="http://mail.google.com" class="fill-div" target="_blank"></a>
+            </div>
+    
+            <div class="container" id="bt">
+                <a href="https://www.bt.com/appsconsumeraccount/secure/dashboard.do" class="fill-div" target="_blank"></a>
+            </div>
+        </center>
+    
+        <script src="js/clear_boxes.js"></script>
+    
+    </body>   
 </html>
