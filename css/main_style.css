@@ -14,6 +14,7 @@ span.title {
     width: 28%;
     height: 100px;
     display: inline-block;
+    border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
 }
