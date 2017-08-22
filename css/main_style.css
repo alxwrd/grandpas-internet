@@ -66,6 +66,7 @@ img.search-logo {
     border-bottom-right-radius: 6px;
     color: #A1B9ED;
     cursor: pointer;
+    user-select: none;
 }
 .delete-button:hover {
     color: #36c;
