@@ -19,13 +19,13 @@ span.title {
     -webkit-border-radius: 5px;
 }
 .container#gmail {
-    background: url(/images/gmail.png);
+    background: url(../images/gmail.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 .container#bt {
-    background: url(/images/bt.png);
+    background: url(../images/bt.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -73,7 +73,7 @@ img.search-logo {
     color: #36c;
 }
 .search-button {
-    background: url(images/ico-search.png) no-repeat center;
+    background: url(../images/ico-search.png) no-repeat center;
     cursor: pointer;
     width: 70px;
     height: 31px;
