@@ -1,39 +1,53 @@
 @import url('https://fonts.googleapis.com/css?family=Cinzel');
+
+body {
+    align-content: center;
+    text-align: center;
+}
+
 span.title {
     display: block;
     font-family: 'Cinzel', serif;
     font-size: 90px;
+    text-align: center;
     color: #444;
 }
+
 .container {
+    text-align: left;
     margin: 10px;
     border-style: solid;
     border-color: #bbb;
     border-width: 2px;
     padding: 20px;
     width: 28%;
-    height: 100px;
+    min-width: 340px;
+    height: 90px;
     display: inline-block;
     border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
 }
+
 .container#gmail {
     background: url(../images/gmail.png);
-    background-size: contain;
+    background-size: 80px;
     background-repeat: no-repeat;
     background-position: center;
 }
+
 .container#bt {
     background: url(../images/bt.png);
-    background-size: contain;
+    background-size: auto 80px;
     background-repeat: no-repeat;
     background-position: center;
 }
+
 img.search-logo {
     height: 50px;
     margin-bottom: -8px;
 }
+
 .search-box {
     float: left;
     width: 65%;
@@ -49,7 +63,9 @@ img.search-logo {
     border-right: none;
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
+    margin-top: 20px;
 }
+
 .delete-button {
     float: left;
     width: auto;
@@ -68,10 +84,13 @@ img.search-logo {
     color: #A1B9ED;
     cursor: pointer;
     user-select: none;
+    margin-top: 20px;    
 }
+
 .delete-button:hover {
     color: #36c;
 }
+
 .search-button {
     background: url(../images/ico-search.png) no-repeat center;
     cursor: pointer;
@@ -79,38 +98,40 @@ img.search-logo {
     height: 31px;
     line-height: 0;
     font-size: 0;
-    /* text-indent:999px; */
-    
     color: transparent;
     border-radius: 4px;
+    margin-top: 20px;  
+    border: none;    
 }
+
 .search-button.google {
     background-color: #4d90fe;
-    border: 1px solid #3079ED;
 }
+
 .search-button.amazon {
     background-color: #FF9900;
-    border: 1px solid #FF9900;
 }
+
 .search-button.ebay {
     background-color: #86b817;
-    border: 1px solid #86b817;
 }
+
 .search-button.youtube {
     background-color: #e52d27;
-    border: 1px solid #b31217;
 }
+
 .search-button.rightmove {
-    background-color: #86D0F4;
-    border: 1px solid #86D0F4;
+    background-color: #00dbb6;
 }
+
 .search-button.gumtree {
     background-color: #72ef36;
-    border: 1px solid #72ef36;
 }
+
 input:focus {
     outline: none;
 }
+
 a.fill-div {
     display: block;
     height: 100%;
